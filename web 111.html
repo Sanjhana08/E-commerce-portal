@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-Commerce Portal</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav { background-color: #333; padding: 10px; }
+    nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+    nav ul li a:hover { text-decoration: underline; }
+
+    section { padding: 20px; border-bottom: 1px solid #ccc; }
+    h2 { color: #333; }
+
+    form { margin: 10px 0; }
+    input, textarea, button {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 300px;
+      max-width: 100%;
+    }
+    button { background-color: #28a745; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #218838; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Product Items</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Our E-Commerce Portal</h2>
+    <p>Shop the latest products, track orders, and more!</p>
+  </section>
+
+  <!-- Product Items -->
+  <section id="products">
+    <h2>Featured Products</h2>
+    <ul>
+      <li>Smartphone - ₹25,000</li>
+      <li>Laptop - ₹55,000</li>
+      <li>Bluetooth Speaker - ₹3,000</li>
+    </ul>
+  </section>
+
+  <!-- Registration Form -->
+  <section>
+    <h2>User Registration</h2>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <!-- Login Form -->
+  <section>
+    <h2>User Login</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </section>
+
+  <!-- Orders -->
+  <section>
+    <h2>Your Orders</h2>
+    <ul>
+      <li>Order #1234 - Delivered</li>
+      <li>Order #5678 - In Transit</li>
+    </ul>
+  </section>
+
+  <!-- Wishlist -->
+  <section>
+    <h2>Your Wishlist</h2>
+    <ul>
+      <li>Wireless Headphones</li>
+      <li>Smartwatch</li>
+    </ul>
+  </section>
+
+  <!-- Reviews -->
+  <section>
+    <h2>Product Reviews</h2>
+    <div><strong>John:</strong> Great product! ⭐⭐⭐⭐☆</div>
+    <div><strong>Jane:</strong> Fast delivery and good quality. ⭐⭐⭐⭐⭐</div>
+  </section>
+
+  <!-- Customer Care -->
+  <section>
+    <h2>Customer Care</h2>
+    <p>Call us at 1800-123-456 or email support@ecommerce.com</p>
+  </section>
+
+  <!-- Report an Issue -->
+  <section>
+    <h2>Report an Issue</h2>
+    <form>
+      <textarea placeholder="Describe your issue..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@ecommerce.com | Phone: +91-9876543210</p>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a leading e-commerce platform offering quality products at great prices.</p>
+  </section>
+
+  <!-- JavaScript for Validation -->
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      if (!email.includes("@") || password.length < 6) {
+        alert("Invalid email or password must be at least 6 characters.");
+        e.preventDefault();
+      }
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      if (!email.includes("@") || password.length < 6) {
+        alert("Invalid login credentials.");
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>
